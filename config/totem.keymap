@@ -32,33 +32,40 @@
     combos {
         compatible = "zmk,combos";
 
-        c1 {
-            bindings = <&kp LSHIFT>;
-            key-positions = <21 22 23>;
+        LK {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <5 6>;
+            timeout-ms = <32>;
         };
 
-        c2 {
-            bindings = <&kp RIGHT>;
-            key-positions = <12 13>;
+        RK {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <6 7>;
+            timeout-ms = <32>;
         };
 
-        c3 {
-            bindings = <&kp LEFT>;
-            key-positions = <12 11>;
+        LP {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <7 8>;
+            timeout-ms = <32>;
         };
 
-        c4 {
+        RP {
             bindings = <&kp UP>;
-            key-positions = <12 1>;
+            key-positions = <9 8>;
+            timeout-ms = <32>;
         };
 
-        c5 {
-            bindings = <&kp DOWN>;
-            key-positions = <12 22>;
+        QE {
+            bindings = <&kp QUESTION>;
+            key-positions = <9 19>;
+            timeout-ms = <32>;
         };
-    };
 
-    macros {
+        SS {
+            bindings = <&kp LG(LS(NUMBER_4))>;
+            key-positions = <21 10>;
+        };
     };
 
     behaviors {
@@ -66,80 +73,71 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD0";
             #binding-cells = <0>;
-            bindings =
-                <&mt0 1 SPACE>,
-                <&mt LCTRL ESCAPE>;
+            bindings = <&mt0 1 SPACE>, <&mt LCTRL ESCAPE>;
 
             tapping-term-ms = <170>;
         };
+
         mt0: mt0 {
             compatible = "zmk,behavior-hold-tap";
             label = "MT0";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             hold-trigger-key-positions = <33>;
         };
+
         mt1: mt1 {
             compatible = "zmk,behavior-hold-tap";
             label = "MT1";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             hold-trigger-key-positions = <36>;
         };
+
         td1: td1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD1";
             #binding-cells = <0>;
-            bindings =
-                <&mt1 1 SPACE>,
-                <&mt CAPSLOCK RSHFT>;
+            bindings = <&mt1 1 SPACE>, <&mt CAPSLOCK RSHFT>;
 
             tapping-term-ms = <170>;
         };
+
         td2: td2 {
             compatible = "zmk,behavior-hold-tap";
             label = "TD2";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <34>;
         };
+
         td3: td3 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD3";
             #binding-cells = <0>;
-            bindings =
-                <&mt RS(P) P>,
-                <&mt QUESTION SLASH>;
+            bindings = <&mt RS(P) P>, <&mt QUESTION SLASH>;
         };
+
         td4: td4 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD4";
             #binding-cells = <0>;
-            bindings =
-                <&mt COLON SEMICOLON>,
-                <&mt SQT DOUBLE_QUOTES>;
+            bindings = <&mt COLON SEMICOLON>, <&mt SQT DOUBLE_QUOTES>;
 
             tapping-term-ms = <200>;
         };
+
         td5: td5 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD5";
             #binding-cells = <0>;
-            bindings =
-                <&mt LS(Q) Q>,
-                <&mt TILDE GRAVE>;
+            bindings = <&mt LS(Q) Q>, <&mt TILDE GRAVE>;
 
             tapping-term-ms = <200>;
         };
@@ -167,10 +165,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &td5  &kp W              &kp E  &kp R         &kp T                      &kp Y  &kp U                &kp I    &kp O      &td3
-         &kp A  &kp S              &kp D  &kp F         &kp G                      &kp H  &kp J                &kp K    &kp L      &td4
-&kp TAB  &kp Z  &kp X              &kp C  &kp V         &kp B                      &kp N  &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp DELETE
-                       &mt LWIN LEFT_ALT   &td0  &td2 1 ENTER  &mt RIGHT_SHIFT BACKSPACE   &td1  &mt RIGHT_ALT RSHFT
+                &kp TAB  &kp D      &kp E         &kp U       &kp COMMA        &kp H      &kp S       &kp Y          &kp R  &kp B
+                &kp Z    &kp MINUS  &kp I         &kp A       &kp O            &kp K      &kp N       &kp T          &kp W  &kp P
+&kp LEFT_SHIFT  &kp Q    &lt 1 X    &kp C         &kp V       &kp PERIOD       &kp G      &kp M       &kp F          &kp J  &kp L  &bt BT_CLR
+                                    &kp LEFT_GUI  &kp RETURN  &mt LCTRL SPACE  &kp SPACE  &kp RETURN  &kp BACKSPACE
             >;
         };
 
@@ -193,10 +191,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp HOME     &kp PAGE_UP    &kp UP_ARROW    &kp PAGE_DOWN  &kp C_VOL_UP
-               &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6         &kp EQUAL          &kp MINUS     &kp END  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C_VOL_DN
-&kp BACKSPACE  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0         &kp PERIOD  &bt BT_CLR      &bt BT_NXT      &bt BT_PRV       &sys_reset    &kp C_MUTE  &kp PRINTSCREEN
-                                               &kp LGUI            &trans          &kp SPACE  &kp DELETE          &trans        &kp RALT
+                &none  &kp N0  &kp N7        &kp N8        &kp N9           &kp EQUAL  &none       &none          &bt BT_SEL 3  &bt BT_SEL 0
+                &none  &none   &kp NUMBER_4  &kp N5        &kp NUMBER_6     &kp PLUS   &none       &none          &bt BT_SEL 4  &bt BT_SEL 1
+&kp LEFT_SHIFT  &none  &to 0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp AT     &none       &none          &none         &bt BT_SEL 2  &bt BT_CLR
+                               &kp LGUI      &kp RETURN    &mt LCTRL SPACE  &kp SPACE  &kp RETURN  &kp BACKSPACE
             >;
         };
 
