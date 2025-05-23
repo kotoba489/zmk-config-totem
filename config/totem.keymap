@@ -66,6 +66,30 @@
             bindings = <&kp LG(LS(NUMBER_4))>;
             key-positions = <21 10>;
         };
+
+        up {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <13 14>;
+            timeout-ms = <32>;
+        };
+
+        dw {
+            bindings = <&kp DOWN>;
+            key-positions = <24 25>;
+            timeout-ms = <32>;
+        };
+
+        la {
+            bindings = <&kp LEFT>;
+            key-positions = <24 13>;
+            timeout-ms = <32>;
+        };
+
+        ra {
+            bindings = <&kp RIGHT_ARROW>;
+            key-positions = <14 25>;
+            timeout-ms = <32>;
+        };
     };
 
     behaviors {
