@@ -51,7 +51,7 @@
         };
 
         RP {
-            bindings = <&kp UP>;
+            bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <9 8>;
             timeout-ms = <32>;
         };
