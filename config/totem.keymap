@@ -58,13 +58,13 @@
 
         QE {
             bindings = <&kp QUESTION>;
-            key-positions = <9 19>;
+            key-positions = <19 18>;
             timeout-ms = <32>;
         };
 
         SS {
             bindings = <&kp LG(LS(NUMBER_4))>;
-            key-positions = <21 10>;
+            key-positions = <10 11>;
         };
 
         up {
@@ -89,6 +89,11 @@
             bindings = <&kp RIGHT_ARROW>;
             key-positions = <14 25>;
             timeout-ms = <32>;
+        };
+
+        es {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
         };
     };
 
@@ -189,10 +194,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &bt BT_CLR      &kp D      &kp E         &kp U       &kp COMMA        &kp H      &kp S       &kp Y     &kp R  &kp B
-                &kp Z           &kp MINUS  &kp I         &kp A       &kp O            &kp K      &kp N       &kp T     &kp W  &kp P
-&kp LEFT_SHIFT  &mt LEFT_ALT Q  &lt 1 X    &kp C         &kp V       &kp PERIOD       &kp G      &kp M       &kp F     &kp J  &kp L  &kp BACKSPACE
-                                           &kp LEFT_GUI  &kp RETURN  &mt LCTRL SPACE  &kp SPACE  &kp RETURN  &kp RGUI
+                &bt BT_CLR  &kp D      &kp E         &kp U       &kp COMMA        &kp H      &kp S       &kp Y          &kp R  &kp B
+                &kp Z       &kp MINUS  &kp I         &kp A       &kp O            &kp K      &kp N       &kp T          &kp W  &kp P
+&kp LEFT_SHIFT  &lt 1 Q     &kp X      &kp C         &kp V       &kp PERIOD       &kp G      &kp M       &kp F          &kp J  &kp L  &kp BACKSPACE
+                                       &kp LEFT_GUI  &kp RETURN  &mt LCTRL SPACE  &kp SPACE  &kp RETURN  &kp RIGHT_ALT
             >;
         };
 
