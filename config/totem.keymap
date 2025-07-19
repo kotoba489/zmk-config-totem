@@ -32,65 +32,6 @@
     combos {
         compatible = "zmk,combos";
 
-        LK {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <5 6>;
-            timeout-ms = <32>;
-        };
-
-        RK {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <6 7>;
-            timeout-ms = <32>;
-        };
-
-        LP {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <7 8>;
-            timeout-ms = <32>;
-        };
-
-        RP {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <9 8>;
-            timeout-ms = <32>;
-        };
-
-        QE {
-            bindings = <&kp QUESTION>;
-            key-positions = <19 18>;
-            timeout-ms = <32>;
-        };
-
-        SS {
-            bindings = <&kp LG(LS(NUMBER_4))>;
-            key-positions = <10 11>;
-        };
-
-        up {
-            bindings = <&kp UP_ARROW>;
-            key-positions = <13 14>;
-            timeout-ms = <32>;
-        };
-
-        dw {
-            bindings = <&kp DOWN>;
-            key-positions = <24 25>;
-            timeout-ms = <32>;
-        };
-
-        la {
-            bindings = <&kp LEFT>;
-            key-positions = <24 13>;
-            timeout-ms = <32>;
-        };
-
-        ra {
-            bindings = <&kp RIGHT_ARROW>;
-            key-positions = <14 25>;
-            timeout-ms = <32>;
-        };
-
         es {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
@@ -194,10 +135,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp LCTRL  &kp D      &kp E         &kp U             &kp COMMA   &kp H      &kp S       &kp Y          &kp R  &kp B
-                &kp Z      &kp MINUS  &kp I         &kp A             &kp O       &kp K      &kp N       &kp T          &kp W  &kp P
-&kp LEFT_SHIFT  &lt 1 Q    &kp X      &kp C         &kp V             &kp PERIOD  &kp G      &kp M       &kp F          &kp J  &kp L  &kp RC(SPACE)
-                                      &kp LEFT_GUI  &mt LEFT_ALT RET  &kp SPACE   &kp SPACE  &kp RETURN  &kp BACKSPACE
+                          &kp LCTRL  &kp D      &kp E         &kp U             &kp COMMA   &kp H      &kp S          &kp Y          &kp R  &kp B
+                          &lt 2 Z    &kp MINUS  &kp I         &kp A             &kp O       &kp K      &kp N          &kp T          &kp W  &kp P
+&mt LEFT_SHIFT LC(SPACE)  &lt 1 Q    &kp X      &kp C         &kp V             &kp PERIOD  &kp G      &kp M          &kp F          &kp J  &kp L  &mt RIGHT_SHIFT RC(SPACE)
+                                                &kp LEFT_GUI  &mt LEFT_ALT RET  &kp SPACE   &kp SPACE  &mt RCTRL RET  &kp BACKSPACE
             >;
         };
 
@@ -220,10 +161,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp LCTRL   &kp N0     &kp N7        &kp N8            &kp N9        &kp PLUS   &kp MINUS     &none          &bt BT_SEL 3    &bt BT_SEL 0
-                &none       &kp SLASH  &kp NUMBER_4  &kp N5            &kp NUMBER_6  &kp EQUAL  &kp ASTERISK  &none          &bt BT_SEL 4    &bt BT_SEL 1
-&kp LEFT_SHIFT  &bt BT_CLR  &to 0      &kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3  &kp AT     &none         &none          &bt BT_CLR_ALL  &bt BT_SEL 2  &kp RC(SPACE)
-                                       &none         &mt LEFT_ALT RET  &kp SPACE     &kp SPACE  &kp RETURN    &kp BACKSPACE
+                          &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LS(N9)      &kp LS(N0)        &kp LG(NUMBER_4)  &kp N7        &kp N8        &kp N9         &kp N0     &kp AT
+                          &none           &kp LS(SLASH)    &none           &kp UP            &none             &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp PLUS   &kp MINUS
+&mt LEFT_SHIFT LC(SPACE)  &none           &none            &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp EQUAL  &kp PERIOD  &kp RC(SPACE)
+                                                           &none           &mt LEFT_ALT RET  &kp SPACE         &kp SPACE     &kp RETURN    &kp BACKSPACE
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+        &bt BT_CLR_ALL  &bt BT_CLR  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 3  &bt BT_SEL 0
+        &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 4  &bt BT_SEL 1
+&trans  &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans        &bt BT_SEL 2  &trans
+                                    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
