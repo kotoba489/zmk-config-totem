@@ -135,10 +135,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                          &kp LCTRL  &kp D      &kp E         &kp U             &kp COMMA   &kp H      &kp S          &kp Y          &kp R  &kp B
-                          &lt 2 Z    &kp MINUS  &kp I         &kp A             &kp O       &kp K      &kp N          &kp T          &kp W  &kp P
-&mt LEFT_SHIFT LC(SPACE)  &lt 1 Q    &kp X      &kp C         &kp V             &kp PERIOD  &kp G      &kp M          &kp F          &kp J  &kp L  &mt RIGHT_SHIFT RC(SPACE)
-                                                &kp LEFT_GUI  &mt LEFT_ALT RET  &kp SPACE   &kp SPACE  &mt RCTRL RET  &kp BACKSPACE
+                          &kp J    &kp D      &kp E         &kp U             &kp COMMA   &kp H      &kp S              &kp Y          &kp R  &kp B
+                          &lt 2 Z  &kp MINUS  &kp I         &kp A             &kp O       &kp K      &kp N              &kp T          &kp W  &kp P
+&mt LEFT_SHIFT LC(SPACE)  &lt 1 Q  &kp X      &kp C         &kp V             &kp PERIOD  &kp G      &kp M              &kp F          &kp J  &kp L  &mt RIGHT_SHIFT RC(SPACE)
+                                              &kp LEFT_GUI  &mt LEFT_ALT RET  &kp SPACE   &kp SPACE  &mt RCTRL RS(RET)  &kp BACKSPACE
             >;
         };
 
@@ -161,10 +161,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                          &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LS(N9)      &kp LS(N0)        &kp LG(NUMBER_4)  &kp N7        &kp N8        &kp N9         &kp N0     &kp AT
-                          &none           &kp LS(SLASH)    &none           &kp UP            &none             &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp PLUS   &kp MINUS
-&mt LEFT_SHIFT LC(SPACE)  &none           &none            &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp EQUAL  &kp PERIOD  &kp RC(SPACE)
-                                                           &none           &mt LEFT_ALT RET  &kp SPACE         &kp SPACE     &kp RETURN    &kp BACKSPACE
+                          &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp LS(N9)      &kp LS(N0)        &kp LG(LS(NUMBER_4))  &kp N7        &kp N8        &kp N9         &kp N0     &kp AT
+                          &kp LS(SLASH)   &kp LS(NUMBER_3)  &none           &kp UP            &none                 &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp PLUS   &kp MINUS
+&mt LEFT_SHIFT LC(SPACE)  &none           &none             &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp EQUAL  &kp PERIOD  &kp RC(SPACE)
+                                                            &none           &mt LEFT_ALT RET  &kp SPACE             &kp SPACE     &kp RETURN    &kp BACKSPACE
             >;
         };
 
