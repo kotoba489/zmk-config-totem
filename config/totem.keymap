@@ -21,7 +21,7 @@
 #define TVP2 5
 
 &mt {
-    quick-tap-ms = <35>;
+    quick-tap-ms = <45>;
     global-quick-tap;
     flavor = "tap-preferred";
     tapping-term-ms = <170>;
@@ -127,7 +127,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                          &kp LEFT_ALT  &kp D      &kp E     &kp R      &kp COMMA   &kp H        &kp S      &kp Y     &kp R  &kp B
+                          &kp LEFT_ALT  &kp D      &kp E     &kp U      &kp COMMA   &kp H        &kp S      &kp Y     &kp R  &kp B
                           &kp Q         &kp MINUS  &kp I     &kp A      &kp O       &kp K        &kp N      &kp T     &kp W  &kp P
 &mt LEFT_SHIFT LC(SPACE)  &lt 1 Z       &kp X      &kp C     &kp V      &kp PERIOD  &kp G        &kp M      &kp F     &kp J  &kp L  &kp RC(SPACE)
                                                    &kp LWIN  &kp SPACE  &kp RET     &kp RS(RET)  &kp SPACE  &kp BSPC
