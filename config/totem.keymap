@@ -127,10 +127,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                          &kp LEFT_ALT  &kp D      &kp E     &kp U      &kp COMMA   &kp H        &kp S      &kp Y     &kp R  &kp B
-                          &kp Z         &kp MINUS  &kp I     &kp A      &kp O       &kp K        &kp N      &kp T     &kp W  &kp P
-&mt LEFT_SHIFT LC(SPACE)  &lt 1 Q       &kp X      &kp C     &kp V      &kp PERIOD  &kp G        &kp M      &kp F     &kp J  &kp L  &kp RC(SPACE)
-                                                   &kp LWIN  &kp SPACE  &kp RET     &kp RS(RET)  &kp SPACE  &kp BSPC
+                          &mt LEFT_ALT ESCAPE  &kp D      &kp E     &kp U      &kp COMMA   &kp H        &kp S      &kp Y     &kp R  &kp B
+                          &kp Z                &kp MINUS  &kp I     &kp A      &kp O       &kp K        &kp N      &kp T     &kp W  &kp P
+&mt LEFT_SHIFT LC(SPACE)  &lt 1 Q              &kp X      &kp C     &kp V      &kp PERIOD  &kp G        &kp M      &kp F     &kp J  &kp L  &kp RC(SPACE)
+                                                          &kp LWIN  &kp SPACE  &kp RET     &kp RS(RET)  &kp SPACE  &kp BSPC
             >;
         };
 
