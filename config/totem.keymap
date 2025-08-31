@@ -154,8 +154,8 @@
 
             bindings = <
                       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LG(LS(NUMBER_4))  &kp N7        &kp N8        &kp N9        &kp N0     &kp AT_SIGN
-                      &kp QUESTION      &kp HASH           &none                 &kp UP_ARROW           &none                 &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp MINUS
-&mt LSHIFT LC(SPACE)  &none             &none              &kp LEFT              &kp DOWN               &kp RIGHT_ARROW       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp PERIOD   &kp RC(SPACE)
+                      &kp QUESTION      &kp HASH           &kp ASTRK             &kp UP_ARROW           &none                 &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp MINUS
+&mt LSHIFT LC(SPACE)  &none             &kp MINUS          &kp LEFT              &kp DOWN               &kp RIGHT_ARROW       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp PERIOD   &kp RC(SPACE)
                                                            &kp LGUI              &kp SPACE              &kp RET               &kp RS(RET)   &kp SPACE     &kp BSPC
             >;
         };
