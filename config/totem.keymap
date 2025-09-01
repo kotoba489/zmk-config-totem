@@ -11,6 +11,7 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
@@ -128,7 +129,7 @@
 
             bindings = <
                           &mt LEFT_ALT ESCAPE  &kp D      &kp E     &kp U      &kp COMMA   &kp H        &kp S      &kp Y     &kp R  &kp B
-                          &kp Z                &kp MINUS  &kp I     &kp A      &kp O       &kp K        &kp N      &kp T     &kp W  &kp P
+                          &lt 2 Z              &kp MINUS  &kp I     &kp A      &kp O       &kp K        &kp N      &kp T     &kp W  &kp P
 &mt LEFT_SHIFT LC(SPACE)  &lt 1 Q              &kp X      &kp C     &kp V      &kp PERIOD  &kp G        &kp M      &kp F     &kp J  &kp L  &kp RC(SPACE)
                                                           &kp LWIN  &kp SPACE  &kp RET     &kp RS(RET)  &kp SPACE  &kp BSPC
             >;
@@ -157,6 +158,15 @@
                       &kp QUESTION      &kp HASH           &kp ASTRK             &kp UP_ARROW           &none                 &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp MINUS
 &mt LSHIFT LC(SPACE)  &none             &kp MINUS          &kp LEFT              &kp DOWN               &kp RIGHT_ARROW       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp PERIOD   &kp RC(SPACE)
                                                            &kp LGUI              &kp SPACE              &kp RET               &kp RS(RET)   &kp SPACE     &kp BSPC
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+        &bt BT_CLR_ALL  &bt BT_CLR  &bt BT_NXT  &trans  &bt BT_SEL 0  &trans  &trans  &trans  &trans  &trans
+        &trans          &trans      &trans      &trans  &bt BT_SEL 1  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans      &trans      &trans  &bt BT_SEL 2  &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans      &trans  &trans        &trans  &trans  &trans
             >;
         };
 
