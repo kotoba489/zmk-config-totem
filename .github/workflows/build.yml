@@ -1,5 +1,5 @@
 name: Build
-on: [push, workflow_dispatch] # 手動(workflow_dispatch)でも動かせるようにします
+on: [push, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -7,7 +7,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive # 128エラー（ submoduleの読み込み失敗）を防ぎます
+          persist-credentials: false # 128エラー（権限）を回避します
 
       - name: Install west
         run: pip3 install west
