@@ -1,38 +1,32 @@
 name: Build
-on: [push, pull_request, workflow_dispatch]
+on: [push, workflow_dispatch] # 手動(workflow_dispatch)でも動かせるようにします
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: zmkfirmware/zmk-build-arm:stable
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Cache west modules
-        uses: actions/cache@v4
         with:
-          path: |
-            modules
-            zephyr
-            bootloader
-            zmk
-          key: ${{ runner.os }}-build-${{ hashFiles('**/west.yml') }}
-          restore-keys: |
-            ${{ runner.os }}-build-
+          submodules: recursive # 128エラー（ submoduleの読み込み失敗）を防ぎます
+
+      - name: Install west
+        run: pip3 install west
+
       - name: West init
         run: west init -l config
+
       - name: West update
         run: west update
-      - name: West export
-        run: west export
-      - name: West build (Left)
-        run: west build -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=totem_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: West build (Right)
-        run: west build -d build/right -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=totem_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+
+      - name: West build
+        run: |
+          west build -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=totem_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          mv build/zephyr/zmk.uf2 totem_left.uf2
+          west build -p -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=totem_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          mv build/zephyr/zmk.uf2 totem_right.uf2
+
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
         with:
           name: totem_firmware
-          path: |
-            build/zephyr/zmk.uf2
-            build/right/zephyr/zmk.uf2
+          path: "*.uf2"
